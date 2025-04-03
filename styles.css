@@ -5,18 +5,18 @@
 }
 
 body {
-  background-color: #1e1e1e; /* Cor de fundo mais escura */
-  color: #e0e0e0; /* Texto em um cinza mais suave */
+  background-color: #1e1e1e; 
+  color: #e0e0e0; 
   font-family: 'Courier New', Courier, monospace;
   line-height: 1.6;
-  overflow-x: hidden; /* Impede rolagem horizontal */
+  overflow-x: hidden; 
 }
 
 header {
   text-align: center;
-  padding: 3rem 1rem; /* Ajustei o padding para que o conteúdo fique mais compacto */
-  background: linear-gradient(90deg, #2f2f2f, #3a3a3a); /* Gradiente de cinza */
-  color: #f0f0f0; /* Cor do texto em off-white */
+  padding: 3rem 1rem; 
+  background: linear-gradient(90deg, #2f2f2f, #3a3a3a); 
+  color: #f0f0f0; 
 }
 
 header .header-content {
@@ -24,32 +24,31 @@ header .header-content {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  flex-direction: column; /* Empilha os elementos na versão mobile */
+  flex-direction: column; 
 }
 
-/* Efeito de digitação do "Hello" */
+
 .typewriter {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid #58a6ff; /* A borda que simula o cursor */
+  border-right: 3px solid #58a6ff; 
   animation: typing 2s steps(5) 1s 1 normal both, erase 2s steps(5) 3s 1 normal forwards, blink 0.75s step-end infinite; /* Ajuste de tempo para mais rápido */
-  font-size: 2rem; /* Ajuste o tamanho da fonte para que não fique grande demais */
+  font-size: 2rem; 
   visibility: visible;
 }
 
-/* Efeito de digitação para o nome e a descrição */
+
 .typewriter-name, .typewriter-text {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid #58a6ff; /* A borda que simula o cursor */
-  animation: typing 4s steps(30) 6s 1 normal both, blink 0.75s step-end infinite; /* Efeito de digitação para o nome e a descrição */
-  font-size: 1.5rem; /* Ajuste o tamanho da fonte para não ser muito grande */
-  visibility: visible; /* Torna visível após "Hello" ser apagado */
+  border-right: 3px solid #58a6ff; 
+  animation: typing 4s steps(30) 6s 1 normal both, blink 0.75s step-end infinite; 
+  font-size: 1.5rem; 
+  visibility: visible; 
 }
 
-/* Efeito de digitação */
 @keyframes typing {
   from {
     width: 0;
@@ -59,7 +58,7 @@ header .header-content {
   }
 }
 
-/* Efeito de apagar "Hello" */
+
 @keyframes erase {
   from {
     width: 100%;
@@ -69,7 +68,7 @@ header .header-content {
   }
 }
 
-/* Efeito de piscar do cursor */
+
 @keyframes blink {
   50% {
     border-color: transparent;
@@ -77,17 +76,17 @@ header .header-content {
 }
 
 header h1 {
-  font-size: 2.5rem; /* Ajuste proporcional */
+  font-size: 2.5rem; 
   margin-bottom: 0.5rem;
 }
 
 header h1 span {
-  color: #a8a8a8; /* Cor do nome em cinza mais claro */
+  color: #a8a8a8; 
 }
 
 header p {
-  font-size: 1.2rem; /* Ajuste o tamanho da fonte para algo mais legível */
-  color: #b8b8b8; /* Cor do subtítulo em cinza suave */
+  font-size: 1.2rem; 
+  color: #b8b8b8; 
 }
 
 header .cta-buttons {
@@ -97,12 +96,12 @@ header .cta-buttons {
 
 .cta-buttons {
   display: flex;
-  justify-content: center; /* Centraliza os botões horizontalmente */
-  align-items: center; /* Alinha os itens verticalmente no centro */
-  gap: 1rem; /* Espaçamento entre os botões */
-  position: relative; /* Mantém os botões no fluxo normal do layout */
+  justify-content: center; 
+  align-items: center;
+  gap: 1rem; 
+  position: relative; 
   bottom: 0;
-  margin-top: 2rem; /* Adiciona espaço entre os botões e o conteúdo acima */
+  margin-top: 2rem; 
 }
 
 .cta-button {
@@ -110,20 +109,20 @@ header .cta-buttons {
   justify-content: center;
   align-items: center;
   background-color: #666666;
-  width: 50px; /* Tamanho fixo para os botões */
-  height: 50px; /* Botões circulares */
+  width: 50px; 
+  height: 50px; 
   border-radius: 50%;
   color: #f0f0f0;
   text-decoration: none;
-  font-size: 1.2rem; /* Tamanho do ícone */
+  font-size: 1.2rem;
   transition: background-color 0.3s ease;
 }
 .cta-button:hover {
-  background-color: #444444; /* Cor dos botões quando passar o mouse */
+  background-color: #444444;
   
 }
 .cta-button i {
-  font-size: 1.5rem; /* Tamanho do ícone dentro do botão */
+  font-size: 1.5rem; 
 }
 
 
@@ -157,15 +156,15 @@ h2 {
 }
 
 .project-card {
-  background-color: #2b2b2b; /* Fundo de projetos em cinza escuro */
-  border: 1px solid #444444; /* Bordas em cinza */
+  background-color: #2b2b2b; 
+  border: 1px solid #444444; 
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 8px;
 }
 
 .project-card h3 {
-  color: #a8a8a8; /* Cor do título do projeto em cinza claro */
+  color: #a8a8a8; 
 }
 
 .project-card a {
@@ -175,7 +174,7 @@ h2 {
 
 .project-card a:hover {
   text-decoration: underline;
-  color: #f0f0f0; /* Muda para off-white quando o link é clicado */
+  color: #f0f0f0; 
 }
 
 footer {
@@ -203,31 +202,31 @@ footer {
   border-radius: 10px;
 }
 
-/* Media queries para dispositivos móveis */
+
 @media (max-width: 768px) {
   header h1 {
-    font-size: 4vw; /* Ajusta o tamanho da fonte para dispositivos menores */
+    font-size: 4vw; 
   }
 
   header p {
-    font-size: 3vw; /* Ajusta o tamanho da fonte para dispositivos menores */
+    font-size: 3vw; 
   }
 
   .cta-button {
-    font-size: 1rem; /* Ajusta o tamanho dos botões para dispositivos menores */
+    font-size: 1rem; 
     margin-top: 1rem;
     margin-left: 1rem;
   }
   .project-card {
-    background-color: #2b2b2b; /* Fundo de projetos em cinza escuro */
-    border: 1px solid #444444; /* Bordas em cinza */
+    background-color: #2b2b2b; 
+    border: 1px solid #444444;
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 8px;
   }
   
   .project-card h3 {
-    color: #a8a8a8; /* Cor do título do projeto em cinza claro */
+    color: #a8a8a8; 
   }
   
   .project-card a {
@@ -237,22 +236,22 @@ footer {
   
   .project-card a:hover {
     text-decoration: underline;
-    color: #f0f0f0; /* Muda para off-white quando o link é clicado */
+    color: #f0f0f0; 
   }
   
   .project-card h4 {
     margin-top: 1rem;
-    color: #58a6ff; /* Cor para o título do preview */
+    color: #58a6ff; 
   }
   
   pre {
-    background-color: #1e1e1e; /* Fundo do código */
-    color: #e0e0e0; /* Texto do código */
+    background-color: #1e1e1e; 
+    color: #e0e0e0; 
     padding: 1rem;
     border-radius: 8px;
     font-family: 'Courier New', Courier, monospace;
     overflow-x: auto;
-    white-space: pre-wrap; /* Faz com que o código quebre automaticamente */
+    white-space: pre-wrap; 
   }
   
   code {
@@ -261,19 +260,19 @@ footer {
   }
   
   .keyword {
-    color: #58a6ff; /* Cor para palavras-chave como 'const', 'await', etc */
+    color: #58a6ff; 
   }
   
   .string {
-    color: #79c0ff; /* Cor para strings */
+    color: #79c0ff; 
   }
   
   .variable {
-    color: #a8a8a8; /* Cor para variáveis */
+    color: #a8a8a8; 
   }
   
   .comment {
-    color: #6a6a6a; /* Cor para comentários */
+    color: #6a6a6a; 
   }
   
 
