@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabriel Malavazi | Portfólio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="profile-info">
+        <h1><span class="typewriter">Hello </span><span class="typewriter-name">I'm Gabriel Malavazi, a Professional Software Engineer.</span></h1>
+        <p class="typewriter-text">Developer | Problem Solver | Passionate about technology and innovation.</p>
+
+        
+      </div>
+      <img src="foto.jpg" alt="Gabriel Malavazi" class="profile-img" />
+    </div>
+    <div class="cta-buttons">
+      <a href="mailto:gabrielmalavazi_dev@outlook.com" class="cta-button">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://github.com/GabrielMalava" target="_blank" class="cta-button">
+        <i class="fab fa-github"></i>
+      </a>
+        <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" class="cta-button">
+          <i class="fab fa-linkedin"></i>
+        </a>          
+    </div>
+  </header>
+  
+  
+  
+
+  <section class="about">
+    <h2>👨‍💻 Sobre Mim</h2>
+    <p>Sou um engenheiro de software apaixonado, com especialização em tecnologias de front-end, APIs e otimização de sistemas. Estou em constante aprendizado, sempre me esforçando para resolver problemas de forma criativa e eficiente.</p>
+  </section>
+
+  <section class="skills">
+    <h2>💻 Habilidades</h2>
+    <ul>
+      <li><strong>Front-end:</strong> React.js, JavaScript, TypeScript, HTML, CSS</li>
+      <li><strong>Back-end:</strong> Node.js, Express.js</li>
+      <li><strong>Banco de Dados:</strong> MongoDB, SQL Server</li>
+      <li><strong>Ferramentas:</strong> Git, GitHub, Docker</li>
+    </ul>
+  </section>
+
+  <section class="code-demo">
+    <h2>💻 Exemplo de Código</h2>
+    <div class="code-container">
+      <!-- Exibe a imagem personalizada do código -->
+      <img src="image.png" alt="Código exemplo" class="code-img" />
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>📌 Projetos</h2>
+    
+    <div class="project-card">
+      <h3>Front_API</h3>
+      <a href="https://github.com/GabrielMalava/Front_API" target="_blank">Ver no GitHub</a>
+      
+      <h4>Preview de Código:</h4>
+      <pre><code>
+        <span class="keyword">const</span> cardItem = <span class="keyword">document</span>.createElement('<span class="string">div</span>');
+        cardItem.className = <span class="string">'card-item'</span>;
+  
+        <span class="keyword">try</span> {
+          <span class="keyword">const</span> cardResponse = <span class="keyword">await</span> <span class="keyword">fetch</span>(`<span class="string">https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(card)}</span>`);
+          <span class="keyword">if</span> (!cardResponse.ok) {
+            <span class="keyword">throw</span> <span class="variable">new</span> <span class="keyword">Error</span>(`<span class="string">Erro ao buscar a carta: </span>` + cardResponse.statusText);
+          }
+          <span class="keyword">const</span> cardData = <span class="keyword">await</span> cardResponse.json();
+          <span class="keyword">const</span> cardImage = cardData.image_uris?.normal || `<span class="string">https://via.placeholder.com/150</span>`;
+  
+          <span class="keyword">const</span> img = <span class="keyword">document</span>.createElement('<span class="string">img</span>');
+          img.src = <span class="string">'image.png'</span>;
+          img.alt = card;
+          img.className = <span class="string">'card-image'</span>;
+  
+          <span class="keyword">const</span> cardName = <span class="keyword">document</span>.createElement('<span class="string">p</span>');
+          cardName.textContent = card;
+  
+          cardItem.appendChild(img);
+          cardItem.appendChild(cardName);
+          <span class="keyword">document</span>.body.appendChild(cardItem);
+        } <span class="keyword">catch</span> (error) {
+          <span class="keyword">console</span>.error(error);
+        }
+      </code></pre>
+    </div>
+    
+    <div class="project-card">
+      <h3>API Magic Front</h3>
+      <a href="https://github.com/GabrielMalava/API_magic_front" target="_blank">Ver no GitHub</a>
+  
+      <h4>Preview de Código:</h4>
+      <pre><code>
+        <span class="keyword">const</span> apiMagic = <span class="keyword">async</span> () => {
+          <span class="keyword">const</span> response = <span class="keyword">await</span> <span class="keyword">fetch</span>(`<span class="string">https://api.example.com/data</span>`);
+          <span class="keyword">if</span> (response.ok) {
+            <span class="keyword">const</span> data = <span class="keyword">await</span> response.json();
+            <span class="keyword">console</span>.log(data);
+          } <span class="keyword">else</span> {
+            <span class="keyword">console</span>.error(`<span class="string">Error fetching data</span>`);
+          }
+        }
+      </code></pre>
+    </div>
+    
+  </section>
+
+  <footer>
+    <p>Desenvolvido com 💻 por Gabriel Malavazi © 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
