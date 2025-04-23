@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -47,7 +47,6 @@ header .header-content {
   font-size: 1.5rem;
   visibility: visible;
 }
-
 .typewriter-text {
   display: inline-block;
   overflow: hidden;
@@ -123,11 +122,9 @@ header .cta-buttons {
   font-size: 1.2rem;
   transition: background-color 0.3s ease;
 }
-
 .cta-button:hover {
   background-color: #444444;
 }
-
 .cta-button i {
   font-size: 1.5rem;
 }
@@ -270,65 +267,47 @@ footer {
 
 @media (max-width: 768px) {
   header h1 {
-    font-size: 6vw;
-  }
-
-  .typewriter {
-    font-size: 5vw;
-  }
-
-  .typewriter-name,
-  .typewriter-text {
-    font-size: 4.5vw;
-  }
-
-  header p {
     font-size: 4vw;
   }
 
-  header .profile-img {
-    width: 40vw;
-    height: 40vw;
-  }
-
-  h2,
-  h3 {
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 1rem;
-    text-align: left;
-    padding: 0 1rem;
-  }
-
-  .cta-buttons {
-    flex-wrap: wrap;
-    justify-content: center;
+  header p {
+    font-size: 3vw;
   }
 
   .cta-button {
-    width: 45px;
-    height: 45px;
     font-size: 1rem;
-    margin: 0.5rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
   }
 
-  .project-card {
-    padding: 1rem 0.5rem;
-  }
-
-  .code-img {
-    width: 100%;
-    height: auto;
-  }
-
-  footer {
+  pre {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
     padding: 1rem;
-    font-size: 0.8rem;
+    border-radius: 8px;
+    font-family: "Courier New", Courier, monospace;
+    overflow-x: auto;
+    white-space: pre-wrap;
   }
 
-  .footer {
-    margin: 0;
+  code {
+    display: block;
+    color: #e0e0e0;
+  }
+
+  .keyword {
+    color: #58a6ff;
+  }
+
+  .string {
+    color: #79c0ff;
+  }
+
+  .variable {
+    color: #a8a8a8;
+  }
+
+  .comment {
+    color: #6a6a6a;
   }
 }
