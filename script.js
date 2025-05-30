@@ -108,21 +108,21 @@ document.querySelectorAll("section").forEach((section) => {
 
 // Initialize carousel functionality
 function initializeCarousel() {
-  const carousels = document.querySelectorAll('.project-carousel');
-  
-  carousels.forEach(carousel => {
-    const slides = carousel.querySelectorAll('.carousel-slide');
-    const dots = carousel.querySelectorAll('.carousel-dot');
-    const prevBtn = carousel.querySelector('.prev');
-    const nextBtn = carousel.querySelector('.next');
+  const carousels = document.querySelectorAll(".project-carousel");
+
+  carousels.forEach((carousel) => {
+    const slides = carousel.querySelectorAll(".carousel-slide");
+    const dots = carousel.querySelectorAll(".carousel-dot");
+    const prevBtn = carousel.querySelector(".prev");
+    const nextBtn = carousel.querySelector(".next");
     let currentSlide = 0;
 
     function showSlide(index) {
-      slides.forEach(slide => slide.classList.remove('active'));
-      dots.forEach(dot => dot.classList.remove('active'));
-      
-      slides[index].classList.add('active');
-      dots[index].classList.add('active');
+      slides.forEach((slide) => slide.classList.remove("active"));
+      dots.forEach((dot) => dot.classList.remove("active"));
+
+      slides[index].classList.add("active");
+      dots[index].classList.add("active");
     }
 
     function nextSlide() {
@@ -136,11 +136,11 @@ function initializeCarousel() {
     }
 
     // Event listeners
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-    
+    nextBtn.addEventListener("click", nextSlide);
+    prevBtn.addEventListener("click", prevSlide);
+
     dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
+      dot.addEventListener("click", () => {
         currentSlide = index;
         showSlide(currentSlide);
       });
@@ -152,4 +152,4 @@ function initializeCarousel() {
 }
 
 // Call carousel initialization after DOM is loaded
-document.addEventListener('DOMContentLoaded', initializeCarousel);
+document.addEventListener("DOMContentLoaded", initializeCarousel);
