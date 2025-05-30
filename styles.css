@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -433,10 +435,11 @@ footer {
   background: rgba(43, 43, 43, 0.9);
   padding: 1.5rem;
   border-radius: 8px;
-  border: 1px solid #30363d;
+  border: 1px solid #2e9100;
   transition: transform 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 0 15px rgba(46, 145, 0, 0.1);
 }
 
 .skill-category::before {
@@ -465,8 +468,10 @@ footer {
 
 .skill-category h3 {
   font-size: 1.5rem;
-  color: #58a6ff;
+  color: #2e9100;
   border-bottom: none;
+  text-shadow: 0 0 10px rgba(46, 145, 0, 0.3);
+  font-family: "Orbitron", sans-serif;
 }
 
 .skill-category li {
@@ -474,11 +479,13 @@ footer {
   align-items: center;
   gap: 0.5rem;
   color: #e0e0e0;
+  font-family: "Orbitron", sans-serif;
 }
 
 .skill-category i {
-  color: #58a6ff;
+  color: #2e9100;
   font-size: 1.2rem;
+  text-shadow: 0 0 5px rgba(46, 145, 0, 0.5);
 }
 
 .stats {
@@ -1014,6 +1021,9 @@ header::before {
   position: relative;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-container {
@@ -1022,6 +1032,8 @@ header::before {
   border-radius: 8px;
   width: 100%;
   height: 100%;
+  box-shadow: 0 0 20px rgba(46, 145, 0, 0.2);
+  border: 1px solid rgba(46, 145, 0, 0.3);
 }
 
 .carousel-slide {
@@ -1030,6 +1042,9 @@ header::before {
   height: 100%;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-slide.active {
@@ -1038,7 +1053,7 @@ header::before {
 
 .carousel-nav {
   position: absolute;
-  bottom: 1rem;
+  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -1047,25 +1062,28 @@ header::before {
 }
 
 .carousel-dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid #2e9100;
+  background: rgba(46, 145, 0, 0.2);
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .carousel-dot.active {
   background: #2e9100;
+  box-shadow: 0 0 10px #2e9100;
 }
 
 .carousel-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
+  background: rgba(46, 145, 0, 0.3);
+  border: 1px solid #2e9100;
+  color: #2e9100;
+  text-shadow: 0 0 5px rgba(46, 145, 0, 0.5);
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1075,10 +1093,12 @@ header::before {
   cursor: pointer;
   transition: background 0.3s ease;
   z-index: 2;
+  font-family: "Orbitron", sans-serif;
 }
 
 .carousel-button:hover {
   background: rgba(46, 145, 0, 0.8);
+  box-shadow: 0 0 15px rgba(46, 145, 0, 0.5);
 }
 
 .carousel-button.prev {
