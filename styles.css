@@ -10,13 +10,39 @@ body {
   font-family: "Courier New", Courier, monospace;
   line-height: 1.6;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
 }
 
 header {
   text-align: center;
   padding: 3rem 1rem;
-  background: linear-gradient(90deg, #2f2f2f, #3a3a3a);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  position: relative;
+  overflow: hidden;
   color: #f0f0f0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(46, 145, 0, 0.1) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
 }
 
 header .header-content {
@@ -121,9 +147,27 @@ header .cta-buttons {
   text-decoration: none;
   font-size: 1.2rem;
   transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 .cta-button:hover {
   background-color: #444444;
+}
+.cta-button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.cta-button:hover::after {
+  opacity: 1;
+  transform: rotate(45deg) translate(-50%, -50%);
 }
 .cta-button i {
   font-size: 1.5rem;
@@ -141,6 +185,11 @@ section {
   max-width: 1000px;
   margin: auto;
   text-align: center;
+  animation: fadeInUp 0.6s ease forwards;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 h2,
@@ -187,6 +236,15 @@ li {
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .project-card h3 {
@@ -247,6 +305,10 @@ footer {
   color: #b8b8b8;
   background-color: #1e1e1e;
   border-top: 1px solid #444444;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .code-demo {
@@ -257,6 +319,23 @@ footer {
 .code-container {
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.code-container::before {
+  content: "● ● ●";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #666;
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
 }
 
 .code-img {
@@ -265,49 +344,392 @@ footer {
   border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 4vw;
-  }
+.featured-projects {
+  padding: 4rem 1.5rem;
+  background: linear-gradient(90deg, #2a2a2a, #333333);
+}
 
-  header p {
-    font-size: 3vw;
-  }
+.project-card.featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  background: rgba(43, 43, 43, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid #58a6ff;
+  transition: transform 0.3s ease;
+}
 
-  .cta-button {
-    font-size: 1rem;
-    margin-top: 1rem;
-    margin-left: 1rem;
-  }
+.project-card.featured:hover {
+  transform: translateY(-5px);
+}
 
-  pre {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-    padding: 1rem;
-    border-radius: 8px;
-    font-family: "Courier New", Courier, monospace;
-    overflow-x: auto;
-    white-space: pre-wrap;
-  }
+.project-preview {
+  overflow: hidden;
+  border-radius: 8px;
+}
 
-  code {
-    display: block;
-    color: #e0e0e0;
-  }
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
 
-  .keyword {
-    color: #58a6ff;
-  }
+.project-img:hover {
+  transform: scale(1.05);
+}
 
-  .string {
-    color: #79c0ff;
-  }
+.project-features {
+  text-align: left;
+  margin: 1rem 0;
+}
 
-  .variable {
-    color: #a8a8a8;
-  }
+.project-features li {
+  color: #b8b8b8;
+  margin-bottom: 0.5rem;
+}
 
-  .comment {
-    color: #6a6a6a;
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.demo-button,
+.github-button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.demo-button {
+  background: #2e9100;
+  color: white;
+}
+
+.github-button {
+  background: #333;
+  color: white;
+  border: 1px solid #58a6ff;
+}
+
+.demo-button:hover,
+.github-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.2);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-category {
+  background: rgba(43, 43, 43, 0.9);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-category::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(46, 145, 0, 0.1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-category:hover::before {
+  opacity: 1;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+}
+
+.skill-category h3 {
+  font-size: 1.5rem;
+  color: #58a6ff;
+  border-bottom: none;
+}
+
+.skill-category li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #e0e0e0;
+}
+
+.skill-category i {
+  color: #58a6ff;
+  font-size: 1.2rem;
+}
+
+.stats {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 4rem 1.5rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 3rem 2rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto 0;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card i {
+  font-size: 2.5rem;
+  color: #2e9100;
+  margin-bottom: 1rem;
+}
+
+.stat-card h3 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.stat-card p {
+  color: #b8b8b8;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Melhorias nos cards de projeto */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animações de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Melhorias no header */
+header {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(46, 145, 0, 0.1) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Efeito de destaque para botões */
+.cta-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.cta-button:hover::after {
+  opacity: 1;
+  transform: rotate(45deg) translate(-50%, -50%);
+}
+
+/* Melhoria nas skills */
+.skill-category {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-category::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(46, 145, 0, 0.1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-category:hover::before {
+  opacity: 1;
+}
+
+/* Melhorias no código demo */
+.code-container {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.code-container::before {
+  content: "● ● ●";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #666;
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.highlight-text {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.achievements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.achievement-item {
+  background: rgba(46, 145, 0, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(46, 145, 0, 0.1);
+}
+
+.achievement-item:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-item i {
+  font-size: 2rem;
+  color: #2e9100;
+  margin-bottom: 1rem;
+}
+
+.achievement-item p {
+  color: #b8b8b8;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.project-video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-video:hover {
+  transform: scale(1.02);
+}
+
+.project-preview {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-preview::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(46, 145, 0, 0.1) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
 }
