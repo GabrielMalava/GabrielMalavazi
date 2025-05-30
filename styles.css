@@ -367,14 +367,21 @@ footer {
 }
 
 .project-preview {
+  position: relative;
   overflow: hidden;
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   transition: transform 0.3s ease;
 }
 
@@ -440,6 +447,11 @@ footer {
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(46, 145, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .skill-category::before {
@@ -724,6 +736,10 @@ header::before {
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-preview::after {
@@ -1031,7 +1047,7 @@ header::before {
   overflow: hidden;
   border-radius: 8px;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 16/9;
   box-shadow: 0 0 20px rgba(46, 145, 0, 0.2);
   border: 1px solid rgba(46, 145, 0, 0.3);
 }
@@ -1051,66 +1067,9 @@ header::before {
   opacity: 1;
 }
 
-.carousel-nav {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 0.5rem;
-  z-index: 2;
-}
-
-.carousel-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 1px solid #2e9100;
-  background: rgba(46, 145, 0, 0.2);
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.carousel-dot.active {
-  background: #2e9100;
-  box-shadow: 0 0 10px #2e9100;
-}
-
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(46, 145, 0, 0.3);
-  border: 1px solid #2e9100;
-  color: #2e9100;
-  text-shadow: 0 0 5px rgba(46, 145, 0, 0.5);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  z-index: 2;
-  font-family: "Orbitron", sans-serif;
-}
-
-.carousel-button:hover {
-  background: rgba(46, 145, 0, 0.8);
-  box-shadow: 0 0 15px rgba(46, 145, 0, 0.5);
-}
-
-.carousel-button.prev {
-  left: 1rem;
-}
-
-.carousel-button.next {
-  right: 1rem;
-}
-
 .project-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
