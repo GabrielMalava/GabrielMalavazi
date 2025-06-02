@@ -1,4 +1,3 @@
-// Initialize Particles.js
 particlesJS("particles-js", {
   particles: {
     number: {
@@ -67,7 +66,6 @@ particlesJS("particles-js", {
   retina_detect: true,
 });
 
-// Add smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -81,7 +79,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Add intersection observer for fade-in animations
 const observerOptions = {
   root: null,
   threshold: 0.1,
@@ -98,7 +95,6 @@ const observer = new IntersectionObserver((entries, observer) => {
   });
 }, observerOptions);
 
-// Apply animation to all sections
 document.querySelectorAll("section").forEach((section) => {
   section.style.opacity = "0";
   section.style.transform = "translateY(20px)";
@@ -106,7 +102,6 @@ document.querySelectorAll("section").forEach((section) => {
   observer.observe(section);
 });
 
-// Initialize carousel functionality
 function initializeCarousel() {
   const carousels = document.querySelectorAll(".project-carousel");
 
@@ -146,10 +141,8 @@ function initializeCarousel() {
       });
     });
 
-    // Auto-advance slides every 5 seconds
     setInterval(nextSlide, 5000);
   });
 }
 
-// Call carousel initialization after DOM is loaded
 document.addEventListener("DOMContentLoaded", initializeCarousel);
