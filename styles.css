@@ -814,6 +814,11 @@ header::before {
   color: #f0f0f0;
 }
 
+.footer-bottom p {
+  text-align: center;
+  max-width: 100%;
+}
+
 .tech-badges {
   display: flex;
   justify-content: center;
