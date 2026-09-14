@@ -392,15 +392,9 @@ function initializeParticles() {
   });
 }
 
-function initializeFooterYear() {
-  const yearElement = document.getElementById("current-year");
-  if (yearElement) yearElement.textContent = new Date().getFullYear();
-}
-
 initializeParticles();
 initializeNavigation();
 initializeReveal();
 initializeSkillsDoors();
 initializeCarousels();
-initializeFooterYear();
 initializeHeroTyping();
