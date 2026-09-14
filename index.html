@@ -3,354 +3,644 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gabriel Malavazi | Portfólio</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta
+      name="description"
+      content="Portfólio de Gabriel Malavazi, Engenheiro de Software Full Stack com experiência em React, Node.js, TypeScript e SQL."
+    />
+    <meta name="theme-color" content="#0a0d0b" />
+    <title>Gabriel Malavazi | Engenheiro de Software</title>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@500;600;700&display=swap"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <div class="header-content">
-        <div class="profile-info">
-          <h1>
-            <span class="typewriter" , style="color: #2e9100">Hello </span
-            ><span class="typewriter-name"
-              >I'm Gabriel Malavazi, a Professional Software Engineer.</span
-            >
-          </h1>
-          <p class="typewriter-text">
-            Developer | Problem Solver | Passionate about technology and
-            innovation.
-          </p>
-        </div>
-        <img src="foto.jpg" alt="Gabriel Malavazi" class="profile-img" />
-      </div>
-      <div class="cta-buttons">
-        <a href="mailto:gabrielmalavazi_dev@outlook.com" class="cta-button">
-          <i class="fas fa-envelope"></i>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Navegação principal">
+        <a href="#inicio" class="nav-brand">
+          <span class="nav-brand-mark" aria-hidden="true">&lt;/&gt;</span>
+          <span>gabriel<span class="accent">.</span>malavazi</span>
         </a>
-        <a
-          href="https://github.com/GabrielMalava"
-          target="_blank"
-          class="cta-button"
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
         >
-          <i class="fab fa-github"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/gabriel-rodrigues-888225354?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-          target="_blank"
-          class="cta-button"
-        >
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#experiencia">Experiência</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato" class="nav-cta">Contato</a></li>
+        </ul>
+      </nav>
     </header>
-    <section class="about">
-      <h2>👨‍💻 Sobre Mim</h2>
-      <div class="about-content">
-        <p class="highlight-text">
-          Engenheiro de Software entusiasta por tecnologia buscando criar
-          soluções inovadoras e escaláveis, com forte experiência em
-          desenvolvimento Full Stack e especialização em tecnologias modernas
-          como React, Node.js e Firebase.
-        </p>
-        <div class="achievements">
-          <div class="achievement-item">
-            <i class="fas fa-rocket"></i>
-            <p>
-              Especialista em desenvolvimento de aplicações web modernas e
-              responsivas
-            </p>
-          </div>
-          <div class="achievement-item">
-            <i class="fas fa-certificate"></i>
-            <p>
-              Experiência comprovada em arquitetura de sistemas e otimização de
-              performance
-            </p>
-          </div>
-          <div class="achievement-item">
-            <i class="fas fa-users-cog"></i>
-            <p>Habilidade trabalhar em projetos em equipes ágeis</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="skills">
-      <h2>💻 Habilidades</h2>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3>Front-end</h3>
-          <ul>
-            <li><i class="fab fa-react"></i> React.js</li>
-            <li><i class="fab fa-js"></i> JavaScript</li>
-            <li><i class="fab fa-html5"></i> HTML5</li>
-            <li><i class="fab fa-css3-alt"></i> CSS3</li>
-            <li><i class="fab fa-js"></i> TypeScript</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h3>Back-end</h3>
-          <ul>
-            <li><i class="fab fa-node"></i> Node.js</li>
-            <li><i class="fas fa-server"></i> Express.js</li>
-            <li><i class="fas fa-fire"></i> Firebase</li>
-            <li><i class="fas fa-database"></i> MongoDB</li>
-            <li><i class="fas fa-database"></i> SQL Server</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h3>Ferramentas</h3>
-          <ul>
-            <li><i class="fab fa-git-alt"></i> Git</li>
-            <li><i class="fab fa-github"></i> GitHub</li>
-            <li><i class="fab fa-docker"></i> Docker</li>
-            <li><i class="fas fa-code-branch"></i> Controle de Versão</li>
-            <li><i class="fas fa-terminal"></i> CLI</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="experience">
-      <h2>🚀 Experiência Profissional</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Técnico e Desenvolvedor</h3>
-            <h4>Atak Sistemas</h4>
-            <p class="timeline-date">2023 - Presente</p>
-            <ul class="timeline-details">
-              <li>
-                Atendimento ao cliente e homologações bancárias no setor de
-                Retaguarda
-              </li>
-              <li>Desenvolvimento de integrações via API e consultas SQL</li>
-              <li>
-                Criação de etiquetas personalizadas com foco em otimização
-              </li>
-              <li>
-                Desenvolvimento de lógica de programação para melhoria de
-                sistemas
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Estagiário</h3>
-            <h4>BDS Informática</h4>
-            <p class="timeline-date">2021 - 2022</p>
-            <ul class="timeline-details">
-              <li>
-                Desenvolvimento e manutenção de interfaces front-end integradas
-                com APIs
-              </li>
-              <li>Análise de funcionalidades e resolução de problemas</li>
-              <li>Otimização da usabilidade e performance</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Desenvolvedor</h3>
-            <h4>Hackathon SEBRAE</h4>
-            <p class="timeline-date">Maio 2023</p>
-            <ul class="timeline-details">
-              <li>Desenvolvimento de aplicação com interface React</li>
-              <li>
-                Integração de APIs e participação na concepção da proposta
-              </li>
-              <li>Projeto destacado por criatividade e eficiência</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="certifications">
-      <h2>📜 Certificações & Cursos</h2>
-      <div class="cert-grid">
-        <div class="cert-card">
-          <div class="cert-icon">
-            <i class="fab fa-react"></i>
-          </div>
-          <h3>React do Zero à Maestria</h3>
-          <p>Udemy - Matheus Battisti</p>
-          <span class="cert-date">2023</span>
-        </div>
-        <div class="cert-card">
-          <div class="cert-icon">
-            <i class="fab fa-js"></i>
-          </div>
-          <h3>JavaScript e TypeScript</h3>
-          <p>Udemy - Claison Santos</p>
-          <span class="cert-date">2023</span>
-        </div>
-        <div class="cert-card">
-          <div class="cert-icon">
-            <i class="fas fa-database"></i>
-          </div>
-          <h3>Microsoft SQL Server 2017</h3>
-          <p>Manipulação de Dados</p>
-          <span class="cert-date">2023</span>
-        </div>
-        <div class="cert-card">
-          <div class="cert-icon">
-            <i class="fas fa-code"></i>
-          </div>
-          <h3>Engenharia de Software</h3>
-          <p>UniCesumar - Bacharelado</p>
-          <span class="cert-date">2025</span>
-        </div>
-      </div>
-    </section>
+    <main>
+      <section class="hero" id="inicio">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="hero-greeting" data-typing data-typing-speed="55">Olá, eu sou</p>
+            <h1 class="hero-name" data-typing data-typing-speed="85">Gabriel Malavazi</h1>
+            <p class="hero-role" data-typing data-typing-speed="45">Engenheiro de Software <span class="hero-role-sep">•</span> Full Stack</p>
 
-    <section class="featured-projects">
-      <h2>🌟 Projetos Destacados</h2>
-      <div class="project-card featured">
-        <div class="project-preview">
-          <div class="project-carousel">
-            <div class="carousel-container">
+            <div class="terminal">
+              <div class="terminal-bar" aria-hidden="true">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-title">gabriel@portfolio:~</span>
+              </div>
+              <p class="terminal-body">
+                <span class="sr-only">Desenvolvo aplicações web modernas e escaláveis. Transformo problemas em soluções eficientes. Apaixonado por tecnologia e inovação.</span>
+                <span aria-hidden="true"><span class="terminal-prompt">&gt;</span><span id="typed-text">Desenvolvo aplicações web modernas e escaláveis.</span></span>
+              </p>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#projetos" class="btn btn-primary">
+                Ver projetos
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </a>
+              <a href="#contato" class="btn btn-ghost">Entrar em contato</a>
+            </div>
+
+            <ul class="social-links">
+              <li>
+                <a
+                  class="social-link"
+                  href="mailto:gabrielmalavazi_dev@outlook.com"
+                  aria-label="Enviar e-mail"
+                >
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="social-link"
+                  href="https://github.com/GabrielMalava"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="social-link"
+                  href="https://www.linkedin.com/in/gabriel-rodrigues-888225354"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-photo">
+              <img
+                src="foto.jpg"
+                alt="Foto de Gabriel Malavazi"
+                width="340"
+                height="340"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="sobre">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">01. sobre</span>
+            <h2 class="section-title">Sobre mim</h2>
+          </div>
+
+          <div class="about-grid">
+            <div>
+              <p class="about-lead">
+                Engenheiro de Software entusiasta por tecnologia buscando criar
+                soluções inovadoras e escaláveis, com forte experiência em
+                desenvolvimento Full Stack e especialização em tecnologias
+                modernas como React, Node.js e Firebase.
+              </p>
+
+              <ul class="highlights">
+                <li class="highlight">
+                  <span class="icon-box">
+                    <i class="fas fa-rocket" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    Especialista em desenvolvimento de aplicações web modernas e
+                    responsivas
+                  </span>
+                </li>
+                <li class="highlight">
+                  <span class="icon-box">
+                    <i class="fas fa-sitemap" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    Experiência comprovada em arquitetura de sistemas e
+                    otimização de performance
+                  </span>
+                </li>
+                <li class="highlight">
+                  <span class="icon-box">
+                    <i class="fas fa-users-gear" aria-hidden="true"></i>
+                  </span>
+                  <span>Habilidade para trabalhar em equipes ágeis</span>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="stats">
+              <li class="stat">
+                <span class="stat-value">500<span class="accent">+</span></span>
+                <span class="stat-label">Horas de código</span>
+              </li>
+              <li class="stat">
+                <span class="stat-value">10<span class="accent">+</span></span>
+                <span class="stat-label">Projetos completos</span>
+              </li>
+              <li class="stat">
+                <span class="stat-value">5<span class="accent">+</span></span>
+                <span class="stat-label">Tecnologias dominadas</span>
+              </li>
+              <li class="stat">
+                <span class="stat-value">100<span class="accent">%</span></span>
+                <span class="stat-label">Comprometimento</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt skills-section" id="habilidades">
+        <div class="skills-scroller">
+          <div class="skills-pin">
+            <div class="container skills-layout">
+              <div class="skills-intro">
+                <div class="section-header">
+                  <span class="section-eyebrow">02. habilidades</span>
+                  <h2 class="section-title">Stack &amp; competências</h2>
+                  <p class="section-subtitle">
+                    Tecnologias, ferramentas e métodos que fazem parte do meu
+                    dia a dia.
+                  </p>
+                </div>
+
+                <div class="skills-progress">
+                  <p class="skills-counter" aria-hidden="true">
+                    <span class="skills-counter-current">01</span> / 04
+                  </p>
+                  <div class="skills-progress-track" aria-hidden="true">
+                    <span class="skills-progress-fill"></span>
+                  </div>
+                  <ol class="skills-steps">
+                    <li>
+                      <button class="skills-step is-active" type="button">
+                        <span class="skills-step-index">01</span>Front-end
+                      </button>
+                    </li>
+                    <li>
+                      <button class="skills-step" type="button">
+                        <span class="skills-step-index">02</span>Back-end
+                      </button>
+                    </li>
+                    <li>
+                      <button class="skills-step" type="button">
+                        <span class="skills-step-index">03</span>Ferramentas
+                      </button>
+                    </li>
+                    <li>
+                      <button class="skills-step" type="button">
+                        <span class="skills-step-index">04</span>Métodos
+                      </button>
+                    </li>
+                  </ol>
+                  <p class="skills-hint">
+                    <i class="fas fa-computer-mouse" aria-hidden="true"></i>
+                    Role para girar os cards
+                  </p>
+                </div>
+              </div>
+
+              <div class="skills-stage">
+                <div class="skills-grid">
+                  <article class="card">
+                    <span class="skill-card-index" aria-hidden="true">01</span>
+                    <div class="skill-card-header">
+                      <span class="icon-box">
+                        <i class="fas fa-display" aria-hidden="true"></i>
+                      </span>
+                      <h3 class="card-title">Front-end</h3>
+                    </div>
+                    <ul class="chip-list">
+                      <li class="chip"><i class="fab fa-react" aria-hidden="true"></i>React.js</li>
+                      <li class="chip"><i class="fab fa-js" aria-hidden="true"></i>JavaScript</li>
+                      <li class="chip"><i class="fas fa-code" aria-hidden="true"></i>TypeScript</li>
+                      <li class="chip"><i class="fab fa-html5" aria-hidden="true"></i>HTML5</li>
+                      <li class="chip"><i class="fab fa-css3-alt" aria-hidden="true"></i>CSS3</li>
+                    </ul>
+                  </article>
+
+                  <article class="card">
+                    <span class="skill-card-index" aria-hidden="true">02</span>
+                    <div class="skill-card-header">
+                      <span class="icon-box">
+                        <i class="fas fa-server" aria-hidden="true"></i>
+                      </span>
+                      <h3 class="card-title">Back-end</h3>
+                    </div>
+                    <ul class="chip-list">
+                      <li class="chip"><i class="fab fa-node-js" aria-hidden="true"></i>Node.js</li>
+                      <li class="chip"><i class="fas fa-bolt" aria-hidden="true"></i>Express.js</li>
+                      <li class="chip"><i class="fas fa-fire" aria-hidden="true"></i>Firebase</li>
+                      <li class="chip"><i class="fas fa-leaf" aria-hidden="true"></i>MongoDB</li>
+                      <li class="chip"><i class="fas fa-database" aria-hidden="true"></i>SQL Server</li>
+                    </ul>
+                  </article>
+
+                  <article class="card">
+                    <span class="skill-card-index" aria-hidden="true">03</span>
+                    <div class="skill-card-header">
+                      <span class="icon-box">
+                        <i class="fas fa-screwdriver-wrench" aria-hidden="true"></i>
+                      </span>
+                      <h3 class="card-title">Ferramentas</h3>
+                    </div>
+                    <ul class="chip-list">
+                      <li class="chip"><i class="fab fa-git-alt" aria-hidden="true"></i>Git</li>
+                      <li class="chip"><i class="fab fa-github" aria-hidden="true"></i>GitHub</li>
+                      <li class="chip"><i class="fab fa-docker" aria-hidden="true"></i>Docker</li>
+                      <li class="chip"><i class="fas fa-code-branch" aria-hidden="true"></i>Controle de versão</li>
+                      <li class="chip"><i class="fas fa-terminal" aria-hidden="true"></i>CLI</li>
+                    </ul>
+                  </article>
+
+                  <article class="card">
+                    <span class="skill-card-index" aria-hidden="true">04</span>
+                    <div class="skill-card-header">
+                      <span class="icon-box">
+                        <i class="fas fa-diagram-project" aria-hidden="true"></i>
+                      </span>
+                      <h3 class="card-title">Métodos</h3>
+                    </div>
+                    <ul class="chip-list">
+                      <li class="chip"><i class="fas fa-table-columns" aria-hidden="true"></i>Kanban</li>
+                      <li class="chip"><i class="fas fa-arrows-rotate" aria-hidden="true"></i>Scrum</li>
+                      <li class="chip"><i class="fas fa-vial" aria-hidden="true"></i>Testes</li>
+                      <li class="chip"><i class="fas fa-plug" aria-hidden="true"></i>Integração de APIs</li>
+                      <li class="chip"><i class="fas fa-language" aria-hidden="true"></i>Inglês avançado (leitura)</li>
+                    </ul>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experiencia">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">03. experiência</span>
+            <h2 class="section-title">Experiência profissional</h2>
+          </div>
+
+          <ol class="timeline">
+            <li class="timeline-item">
+              <span class="timeline-marker" aria-hidden="true"></span>
+              <article class="timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Técnico e Desenvolvedor</h3>
+                    <p class="timeline-company">Atak Sistemas</p>
+                  </div>
+                  <span class="timeline-date">2023 — Presente</span>
+                </div>
+                <ul class="timeline-details">
+                  <li>
+                    Atendimento ao cliente e homologações bancárias no setor de
+                    Retaguarda
+                  </li>
+                  <li>Desenvolvimento de integrações via API e consultas SQL</li>
+                  <li>Criação de etiquetas personalizadas com foco em otimização</li>
+                  <li>
+                    Desenvolvimento de lógica de programação para melhoria de
+                    sistemas
+                  </li>
+                </ul>
+              </article>
+            </li>
+
+            <li class="timeline-item">
+              <span class="timeline-marker" aria-hidden="true"></span>
+              <article class="timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Desenvolvedor</h3>
+                    <p class="timeline-company">Hackathon SEBRAE</p>
+                  </div>
+                  <span class="timeline-date">Maio 2023</span>
+                </div>
+                <ul class="timeline-details">
+                  <li>Desenvolvimento de aplicação com interface React</li>
+                  <li>Integração de APIs e participação na concepção da proposta</li>
+                  <li>Projeto destacado por criatividade e eficiência</li>
+                </ul>
+              </article>
+            </li>
+
+            <li class="timeline-item">
+              <span class="timeline-marker" aria-hidden="true"></span>
+              <article class="timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Estagiário</h3>
+                    <p class="timeline-company">BDS Informática</p>
+                  </div>
+                  <span class="timeline-date">2021 — 2022</span>
+                </div>
+                <ul class="timeline-details">
+                  <li>
+                    Desenvolvimento e manutenção de interfaces front-end
+                    integradas com APIs
+                  </li>
+                  <li>Análise de funcionalidades e resolução de problemas</li>
+                  <li>Otimização da usabilidade e performance</li>
+                </ul>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="formacao">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">04. formação</span>
+            <h2 class="section-title">Formação &amp; certificações</h2>
+          </div>
+
+          <div class="cert-grid">
+            <article class="card cert-card">
+              <span class="icon-box">
+                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+              </span>
+              <h3 class="card-title">Engenharia de Software</h3>
+              <p class="cert-issuer">Bacharelado · UniCesumar</p>
+              <div class="cert-footer">
+                <span class="cert-type">Graduação</span>
+                <span class="cert-date">2025</span>
+              </div>
+            </article>
+
+            <article class="card cert-card">
+              <span class="icon-box">
+                <i class="fab fa-react" aria-hidden="true"></i>
+              </span>
+              <h3 class="card-title">React do Zero à Maestria</h3>
+              <p class="cert-issuer">Udemy · Matheus Battisti</p>
+              <div class="cert-footer">
+                <span class="cert-type">Curso</span>
+                <span class="cert-date">2023</span>
+              </div>
+            </article>
+
+            <article class="card cert-card">
+              <span class="icon-box">
+                <i class="fab fa-js" aria-hidden="true"></i>
+              </span>
+              <h3 class="card-title">JavaScript e TypeScript</h3>
+              <p class="cert-issuer">Udemy · Claison Santos</p>
+              <div class="cert-footer">
+                <span class="cert-type">Curso</span>
+                <span class="cert-date">2023</span>
+              </div>
+            </article>
+
+            <article class="card cert-card">
+              <span class="icon-box">
+                <i class="fas fa-database" aria-hidden="true"></i>
+              </span>
+              <h3 class="card-title">Microsoft SQL Server 2017</h3>
+              <p class="cert-issuer">Manipulação de dados</p>
+              <div class="cert-footer">
+                <span class="cert-type">Curso</span>
+                <span class="cert-date">2023</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projetos">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">05. projetos</span>
+            <h2 class="section-title">Projetos em destaque</h2>
+          </div>
+
+          <article class="project-card">
+            <div class="project-carousel">
               <div class="carousel-slide active">
                 <img
                   src="miniblog.jpg"
-                  alt="Preview do MiniBlog - Interface principal"
-                  class="project-img"
+                  alt="MiniBlog: interface principal"
                   loading="lazy"
                 />
               </div>
               <div class="carousel-slide">
                 <img
                   src="miniblog2.jpg"
-                  alt="Preview do MiniBlog - Dashboard"
-                  class="project-img"
+                  alt="MiniBlog: dashboard"
                   loading="lazy"
                 />
               </div>
+              <button
+                class="carousel-button prev"
+                type="button"
+                aria-label="Imagem anterior"
+              >
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+              </button>
+              <button
+                class="carousel-button next"
+                type="button"
+                aria-label="Próxima imagem"
+              >
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+              </button>
+              <div class="carousel-nav">
+                <button
+                  class="carousel-dot active"
+                  type="button"
+                  aria-label="Ver imagem 1"
+                  aria-current="true"
+                ></button>
+                <button
+                  class="carousel-dot"
+                  type="button"
+                  aria-label="Ver imagem 2"
+                  aria-current="false"
+                ></button>
+              </div>
             </div>
-            <button class="carousel-button prev">
-              <i class="fas fa-angle-left"></i>
-            </button>
-            <button class="carousel-button next">
-              <i class="fas fa-angle-right"></i>
-            </button>
-            <div class="carousel-nav">
-              <div class="carousel-dot active"></div>
-              <div class="carousel-dot"></div>
+
+            <div class="project-body">
+              <span class="project-label">Aplicação web</span>
+              <h3 class="project-title">MiniBlog</h3>
+              <p class="project-description">
+                Blog interativo desenvolvido com React e Firebase, oferecendo uma
+                experiência moderna e responsiva para criação e compartilhamento
+                de conteúdo.
+              </p>
+              <ul class="project-features">
+                <li><i class="fas fa-check" aria-hidden="true"></i>Sistema completo de autenticação de usuários</li>
+                <li><i class="fas fa-check" aria-hidden="true"></i>Editor de posts com suporte a formatação</li>
+                <li><i class="fas fa-check" aria-hidden="true"></i>Sistema de tags e categorias</li>
+                <li><i class="fas fa-check" aria-hidden="true"></i>Dashboard personalizado para gerenciamento</li>
+                <li><i class="fas fa-check" aria-hidden="true"></i>Interface responsiva e moderna</li>
+              </ul>
+              <ul class="chip-list project-tags" aria-label="Tecnologias">
+                <li class="chip"><i class="fab fa-react" aria-hidden="true"></i>React</li>
+                <li class="chip"><i class="fas fa-fire" aria-hidden="true"></i>Firebase</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://miniblog-eb010.web.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary"
+                >
+                  <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  Ver demo
+                </a>
+                <a
+                  href="https://github.com/GabrielMalava/Mini-blog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-ghost"
+                >
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                  Código fonte
+                </a>
+              </div>
             </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="contato">
+        <div class="container">
+          <div class="contact-card">
+            <span class="section-eyebrow">06. contato</span>
+            <h2 class="section-title">Vamos construir algo juntos?</h2>
+            <p class="contact-text">
+              Tem um projeto, uma oportunidade ou quer trocar uma ideia sobre
+              tecnologia? Fale comigo.
+            </p>
+            <div class="contact-actions">
+              <a
+                href="mailto:gabrielmalavazi_dev@outlook.com"
+                class="btn btn-primary"
+              >
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                Enviar e-mail
+              </a>
+              <a
+                href="https://www.linkedin.com/in/gabriel-rodrigues-888225354"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-ghost"
+              >
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/GabrielMalava"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-ghost"
+              >
+                <i class="fab fa-github" aria-hidden="true"></i>
+                GitHub
+              </a>
+            </div>
+            <p class="contact-email">gabrielmalavazi_dev@outlook.com</p>
           </div>
         </div>
-        <div class="project-description">
-          <h3>MiniBlog</h3>
-          <p>
-            Blog interativo desenvolvido com React e Firebase, oferecendo uma
-            experiência moderna e responsiva para criação e compartilhamento de
-            conteúdo.
-          </p>
-          <ul class="project-features">
-            <li>✅ Sistema completo de autenticação de usuários</li>
-            <li>✅ Editor de posts com suporte a formatação</li>
-            <li>✅ Sistema de tags e categorias</li>
-            <li>✅ Dashboard personalizado para gerenciamento</li>
-            <li>✅ Interface responsiva e moderna</li>
-          </ul>
-          <div class="project-links">
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a href="#inicio" class="nav-brand">
+          <span class="nav-brand-mark" aria-hidden="true">&lt;/&gt;</span>
+          <span>gabriel<span class="accent">.</span>malavazi</span>
+        </a>
+        <p class="footer-copy">
+          © <span id="current-year">2026</span> Gabriel Malavazi. Todos os
+          direitos reservados.
+        </p>
+        <ul class="social-links">
+          <li>
             <a
-              href="https://miniblog-eb010.web.app/"
-              target="_blank"
-              class="demo-button"
+              class="social-link"
+              href="mailto:gabrielmalavazi_dev@outlook.com"
+              aria-label="Enviar e-mail"
             >
-              <i class="fas fa-external-link-alt"></i> Ver Demo
+              <i class="fas fa-envelope" aria-hidden="true"></i>
             </a>
+          </li>
+          <li>
             <a
-              href="https://github.com/GabrielMalava/Mini-blog"
+              class="social-link"
+              href="https://github.com/GabrielMalava"
               target="_blank"
-              class="github-button"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
             >
-              <i class="fab fa-github"></i>
-              Código Fonte
+              <i class="fab fa-github" aria-hidden="true"></i>
             </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="stats">
-      <h2>🎯 Contribuições & Impacto</h2>
-      <div class="stats-grid">
-        <div class="stat-card">
-          <i class="fas fa-code"></i>
-          <h3>500+</h3>
-          <p>Horas de Código</p>
-        </div>
-        <div class="stat-card">
-          <i class="fas fa-briefcase"></i>
-          <h3>10+</h3>
-          <p>Projetos Completos</p>
-        </div>
-        <div class="stat-card">
-          <i class="fas fa-laptop-code"></i>
-          <h3>5+</h3>
-          <p>Tecnologias Dominadas</p>
-        </div>
-        <div class="stat-card">
-          <i class="fas fa-chart-line"></i>
-          <h3>100%</h3>
-          <p>Comprometimento</p>
-        </div>
-      </div>
-    </section>
-    <footer class="enhanced-footer">
-      <div class="footer-grid">
-        <div class="footer-section">
-          <h3>Tecnologias Front-end</h3>
-          <ul class="tech-stack">
-            <li><i class="fab fa-react"></i> React</li>
-            <li><i class="fab fa-js"></i> JavaScript</li>
-            <li><i class="fab fa-html5"></i> HTML5</li>
-            <li><i class="fab fa-css3"></i> CSS3</li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Ferramentas & Métodos</h3>
-          <ul class="certifications">
-            <li><i class="fab fa-git-alt"></i> Git</li>
-            <li><i class="fas fa-tasks"></i> Kanban</li>
-            <li><i class="fas fa-code-branch"></i> Scrum</li>
-            <li><i class="fas fa-vial"></i> Testes</li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Competências</h3>
-          <ul class="performance">
-            <li><i class="fas fa-code"></i> Integração de APIs</li>
-            <li><i class="fas fa-database"></i> SQL</li>
-            <li><i class="fas fa-language"></i> Inglês Avançado (Leitura)</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>Desenvolvido com 💻 por Gabriel Malavazi © 2025</p>
-        <div class="tech-badges">
-          <span class="badge"><i class="fas fa-mobile-alt"></i> PWA Ready</span>
-          <span class="badge"
-            ><i class="fas fa-universal-access"></i> WCAG 2.1</span
-          >
-          <span class="badge"
-            ><i class="fas fa-shield-alt"></i> SSL Secured</span
-          >
-        </div>
+          </li>
+          <li>
+            <a
+              class="social-link"
+              href="https://www.linkedin.com/in/gabriel-rodrigues-888225354"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
 
-    <!-- Particle Animation Background -->
     <div id="particles-js"></div>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
   </body>
